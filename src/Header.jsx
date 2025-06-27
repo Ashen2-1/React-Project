@@ -1,19 +1,18 @@
-
+import Home from './assets/HeadingImg.png'
 function Header(){
 
     return(
-        <header>
-            <h1>Art History</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <hr></hr>
-        </header>
+        <div className='Header'>
+           <header>
+            <h1 className="HomeHeader">HOME</h1>
+            <hr className='Line'></hr>
+            <div className='HeaderImgContainer'>
+                <img className='HeaderImg' src={Home} alt="Home Background"></img>
+            </div>
+            
+            </header> 
+        </div>
+        
     );
 }
 
