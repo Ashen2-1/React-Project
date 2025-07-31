@@ -11,7 +11,7 @@ function TodayArtworkSection(props) {
         </div>
         
         <div className='TASectionButtonContainer'>
-            <button className="TASectionButton">Read More</button>
+            <button onClick={props.ClickFunction} className="TASectionButton">Read More</button>
         </div>
         
       </div>
