@@ -6,7 +6,7 @@ function HomeCard(props){
         <div className="HomeCard">
             
 
-            <button  className="HomeCardButton">
+            <button  className="HomeCardButton" onClick={props.onClick}>
                 <img className="HomeCardImg" src={props.img} alt={props.alt} />
             </button>
         </div>
