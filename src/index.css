@@ -227,25 +227,30 @@ html, body {
   gap: 20px 50px;
   padding: 120px;
   justify-content: center;
+  border: none;
 }
 
 .HomeGridCard1 {
   grid-row: span 2; 
+  border: none;
 }
 
 .HomeGridCard2 {
   grid-column: 2/4;
   grid-row: 1 / 2;
+  border: none;
 }
 
 .HomeGridCard3 {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  border: none;
 }
 
 .HomeGridCard4 {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
+  border: none;
 }
 
 .HomeGridSectionCard {
@@ -434,3 +439,174 @@ html, body {
 
 /* Make sure to import Playfair Display font in your project */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+/* Daily Artwork Seaction CSS */
+
+.DailyArtwork #DailyArtworkTitile{
+  font-family: "Anton", serif;
+  font-size: 5.5vw;
+  color: #3c3533;
+  padding: 43px 0 30px 160px;
+}
+
+.DailyArtwork{
+  background-image: url("../src/assets/TodayArtworkBig.png");
+  background-size: cover;
+  height: 30vw;
+
+}
+
+.DailyArtworkPageSeaction {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  background-color: #d3c6b8;
+  gap: 1.5vw;
+  padding: 2vw;
+  border-radius: 2.5vw;
+  margin: 5vw auto;
+  margin-top: 0;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+/* Image Styling */
+#DailyArtworkImg {
+  border-radius: 1.5vw;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+/* Title Styling */
+#DailyArtworkTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #7d3124;
+  padding: 0 0 1vw 0;
+}
+
+/* Author and Location */
+#DailyArtworkAuthor,
+#DailyArtworkLoaction {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #000;
+  padding-top: 0.3vw;
+}
+
+/* Location Bottom Padding */
+#DailyArtworkLoaction {
+  padding-bottom: 2vw;
+}
+
+/* Horizontal Line */
+#DailyArtworkLine {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #000;
+}
+
+/* Tags Section */
+.TagsSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75vw;
+  margin-top: 0;
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+/* Individual Tag */
+.TagButton {
+  background-color: #d3c6b8;
+  border: 1.5px solid #999;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 16px;
+  margin: 0px 12px 12px 0;
+  font-family: "Playfair Display", serif;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.TagButton:hover {
+  background-color: #c4b4a5;
+  color: #000;
+  border-color: #333;
+}
+
+/* Subtitle Block */
+.SubSeaction {
+  background-color: #e9dbdb;
+  border-radius: 1.5vw;
+}
+
+/* Subtitle Text */
+#DailyArtworkSubtitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #7d3124;
+  padding: 2vw 0 1vw 2vw;
+}
+
+/* Subdescription Text */
+#DailyArtworkSubdescription {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #0d0c0c;
+  padding: 0 2vw 1.5vw 2vw;
+  line-height: 28px;
+}
+
+
+.DailyArtworkParg {
+  grid-row: span 2;
+  padding: 0.2vw 2vw 1vw 2vw;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #111;
+  line-height: 28px;
+}
+
+
+
+
+/* Article Page Seaction CSS */
+
+.Article {
+  position: relative;
+  background-image: url("../src/assets/V1ArticlePageTitleImg.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 30vw; 
+}
+
+
+.Article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2); 
+  z-index: 0;
+}
+
+
+.ArticleContent {
+  position: relative;
+  z-index: 1;
+  margin: 0 363px;
+  padding: 0 0; 
+}
+
+#ArticleTitile {
+  font-family: "anton", serif;
+  color: #f2ece7;
+  font-size: 3.5vw;
+  padding: 75px 75px 0 75px;
+}
