@@ -1,0 +1,156 @@
+.ArticleContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+  color: #544541;
+  background-color: #f2ece7;
+  min-height: 200vh;
+}
+
+#ArticleTitle {
+  font-size: 44pt;
+  text-align: left;
+  margin: 0 74px 74px 74px;
+  font-family: 'anton', serif;
+  color: #f2ece7;
+  font-weight: 400;
+}
+
+.articleContent {
+  font-size: 1.1rem;
+  text-align: justify;
+  color: #544541;
+}
+
+.article-text-section {
+  
+  margin-bottom: 40px; 
+}
+
+.article-text-section h2 {
+  margin-top: 70px; /* More space above section titles */
+  margin-bottom: 25px; /* More space below section titles */
+  font-family: 'Playfair Display', serif;
+  
+}
+
+.article-text-section p {
+  margin-top: 50px;
+  margin-bottom: 30px; /* More space between paragraphs */
+  font-family: 'Playfair Display', serif;
+  
+}
+
+/* Fixed image centering and sizing */
+.ArticleImg {
+  margin: 0px; /* Changed margin-top to margin and added auto for centering */
+  text-align: center;
+  display: block; /* Ensure proper block display */
+  
+}
+
+.ArticleImg img {
+  max-width: 600px; /* Set maximum width instead of 100% */
+  width: 100%; /* Responsive but not larger than max-width */
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
+.ArticleImg h4 {
+  font-style: italic;
+  margin-top: 15px; /* Slightly more space above caption */
+  color: #f2ece7;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+/* Also fix image sections rendered by the component */
+.article-image-section {
+  margin: 0px auto; /* More spacing and centering */
+  text-align: center;
+  display: block;
+}
+
+.article-image-section img {
+  max-width: 600px; /* Limit image size */
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+.image-caption {
+  font-style: italic;
+  margin-top: 15px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.TagsSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 50px; /* More space above tags */
+}
+
+.TagButton {
+  padding: 8px 16px;
+  background-color: #ecf0f1;
+  border: none;
+  border-radius: 20px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.TagButton:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+#ArticleLine {
+  margin: 0px 0; /* Increased spacing around the line */
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #f2ece7, transparent);
+}
+
+@media (max-width: 768px) {
+  .ArticleContent {
+    padding: 15px;
+    background-color: #f2ece7;
+  }
+  
+  #ArticleTitle {
+    font-size: 2rem;
+  }
+  
+  /* Adjust image max-width for mobile */
+  .ArticleImg img,
+  .article-image-section img {
+    max-width: 100%;
+  }
+  
+  /* Reduce spacing on mobile for better use of space */
+  .article-text-section {
+    margin-bottom: 30px;
+  }
+  
+  .article-text-section h2 {
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+  
+  .ArticleImg,
+  .article-image-section {
+    margin: 40px auto;
+  }
+}

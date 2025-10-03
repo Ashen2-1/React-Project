@@ -1,44 +1,57 @@
-
 function ArticleBox(props) {
-
-    const handleTagClick = (tag) => {
+  const handleTagClick = (tag) => {
     console.log("Clicked tag:", tag);
-    // Here Eric or Me this is a note from the Tom in July 29 2025! Here is where to add route, or do anything with the tag
-    };
+  };
+
+  // Function to render different section types
+  const renderSection = (section, index) => {
+    switch (section.type) {
+      case 'text':
+        return (
+          <div key={index} className="article-text-section">
+            {section.title && <h2>{section.title}</h2>}
+            <p>{section.content}</p>
+          </div>
+        );
+      case 'image':
+        return (
+          <div key={index} className="article-image-section">
+            <img src={section.src} alt={section.alt || "Article image"} />
+            {section.caption && <div className="image-caption">{section.caption}</div>}
+          </div>
+        );
+      case 'divider':
+        return <hr key={index} className="article-divider" />;
+      default:
+        return null;
+    }
+  };
+
   return(
     <div className="ArticleContent">
-        <div className='Article'>
-            <h1 id='ArticleTitile'>{props.DailyArtworkTitile}</h1>
-            
-                <div className="ArticlePageSeaction">
-
-                    <div className="ArticleParagraphTitle">
-                        <h2>{props.ParagraphTitle}</h2>
-                    </div>
-                    <div className='ArticleParagraph'>
-                        <p>{props.paragraph}</p>
-                    </div>
-
-                    <div className="ArticleImg">
-                        <img>{props.Img}</img>
-                        <h4>{props.ImgLable}</h4>
-                    </div>
-
-                    <hr id='ArticleLine'></hr>
-                    <div className="TagsSection">
-                        {props.tags && props.tags.map((tag, index) => (
-                            <button className="TagButton" key={index} onClick={() => handleTagClick(tag)}>
-                            {tag}
-                            </button>
-                        ))}
-                    </div>
-
-                </div>
-            
+      <div className='Article'>
+        <h1 id='ArticleTitle'>{props.title}</h1>
+        
+        <div className="ArticlePageSection">
+          {/* Render all sections */}
+          {props.sections && props.sections.map((section, index) => 
+            renderSection(section, index)
+          )}
+          
+          <hr id='ArticleLine'></hr>
+          
+          {/* Tags section */}
+          <div className="TagsSection">
+            {props.tags && props.tags.map((tag, index) => (
+              <button className="TagButton" key={index} onClick={() => handleTagClick(tag)}>
+                {tag}
+              </button>
+            ))}
+          </div>
         </div>
+      </div>
     </div>
   );
-  
-  
 }
-export default ArticleBox
+
+export default ArticleBox;
