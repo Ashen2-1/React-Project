@@ -7,12 +7,8 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import './ArtThreadsCSS.css'
+import './ArtThreadsCSS.css';
 
-import FristSeactionImg1 from "../../assets/2.png";
-import FristSeactionImg2 from "../../assets/3.png";
-import FristSeactionImg3 from "../../assets/4.png";
-import FristSeactionImg4 from "../../assets/5.png";
 
 
 

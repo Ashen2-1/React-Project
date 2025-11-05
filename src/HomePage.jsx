@@ -34,6 +34,9 @@ function HomePage(props){
         navigate("/ArtThreadsPage");  // ← go to /ArtThreads Page 
     };
 
+    const ClicktoStarterPackPage = () => {
+        navigate("/StarterPage");  // ← go to /ArtThreads Page 
+    };
     return(
         
         
@@ -41,15 +44,13 @@ function HomePage(props){
 
                 <Header></Header>
 
-                <div className="searchButtonContainer">
-                  <SearchButton />
-                </div>
+                
 
                 <div className="HomeCardRow">
-                  <HomeCard img= {DailyArtwork} alt = "Daily Artwork"/>
+                  <HomeCard onClick={ClicktoDailyArtworkPage} img= {DailyArtwork} alt = "Daily Artwork"/>
                   <HomeCard img= {ArtMap} alt = "Art Map"/>
                   <HomeCard onClick={ClicktoArtThreadsPage} img= {ArtThreads} alt = "Art Threads"/>
-                  <HomeCard img= {StarterPack} alt = "Starter Pack"/>
+                  <HomeCard onClick={ClicktoStarterPackPage} img= {StarterPack} alt = "Starter Pack"/>
                 </div>
 
                 <TodayArtworkSection
