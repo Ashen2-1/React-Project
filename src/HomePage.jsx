@@ -30,6 +30,13 @@ function HomePage(props){
         navigate("/ArticlePage");  // ← go to /Article Page 
     };
 
+    const ClicktoArtThreadsPage = () => {
+        navigate("/ArtThreadsPage");  // ← go to /ArtThreads Page 
+    };
+
+    const ClicktoStarterPackPage = () => {
+        navigate("/StarterPage");  // ← go to /ArtThreads Page 
+    };
     return(
         
         
@@ -37,15 +44,13 @@ function HomePage(props){
 
                 <Header></Header>
 
-                <div className="searchButtonContainer">
-                  <SearchButton />
-                </div>
+                
 
                 <div className="HomeCardRow">
-                  <HomeCard img= {DailyArtwork} alt = "Daily Artwork"/>
+                  <HomeCard onClick={ClicktoDailyArtworkPage} img= {DailyArtwork} alt = "Daily Artwork"/>
                   <HomeCard img= {ArtMap} alt = "Art Map"/>
-                  <HomeCard img= {ArtThreads} alt = "Art Threads"/>
-                  <HomeCard img= {StarterPack} alt = "Starter Pack"/>
+                  <HomeCard onClick={ClicktoArtThreadsPage} img= {ArtThreads} alt = "Art Threads"/>
+                  <HomeCard onClick={ClicktoStarterPackPage} img= {StarterPack} alt = "Starter Pack"/>
                 </div>
 
                 <TodayArtworkSection
@@ -59,8 +64,8 @@ function HomePage(props){
                 <div className="HomeGridCardContainer">
                   <HomeGridCard className="HomeGridCard1" onClick={ClicktoArticlePage} img={HomeGridCard1} title="How to Read a Contemporary Oil Painting?" description="Don't understand contemporary art?..." />
                   <HomeGridCard className="HomeGridCard2" img={HomeGridCard2} title="Into To Art History" description="A short introduction to art history." />
-                  <HomeGridCard className="HomeGridCard3" img={HomeGridCard3} title="The Spread of Buddhist Art in Central Asia: Visual Culture along the Silk Road" />
-                  <HomeGridCard className="HomeGridCard4" img={HomeGridCard4} title="The Impressionist Revolution: The Birth of Light, Shadow, and Modern Perception" />
+                  <HomeGridCard className="HomeGridCard3" img={HomeGridCard3} title="The Spread of Buddhist Art in Central Asia: " description="Visual Culture along the Silk Road"/>
+                  <HomeGridCard className="HomeGridCard4" img={HomeGridCard4} title="The Impressionist Revolution: " description="The Birth of Light, Shadow, and Modern Perception"/>
                 </div>
                 
         </>

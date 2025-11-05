@@ -45,37 +45,156 @@ html, body {
   padding: 0;
 }
 
-
+/*Here is the Home Heading Seaction*/
 .Header{
-  margin: 0px 80px 0px 80px;
+  margin: 0px 80px 0px 0px;
+  width:100%
+}
+
+.Nevgbar{
+  display: flex;
+  align-items: center;
+}
+.NevgbarWordsButton{
+  margin-left: auto;   /* <--- pushes this group (and everything after it) to the right */
+  display: flex;
+  gap: 12px;           /* spacing between each nav button */
+  align-items: center;
 }
 
 
+.HearderSearchButton{
+  
+  background-color: rgba(255, 255, 255, 0); /* 👈 0.3 = 30% opaque */
+  border: 1px solid rgba(255, 255, 255, 0); /* optional border */
+  border-radius: 0px;
+  font-weight: bold;
+  font-size: 15pt;
+  backdrop-filter: blur(1px); /* optional: adds frosted glass effect */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding-right: 33.9px;
+  padding-left: 22.9px;
+}
+
+
+.NevgbarWordsButton button{
+  background-color: rgba(255, 255, 255, 0); /* 👈 0.3 = 30% opaque */
+  border: 1px solid rgba(255, 255, 255, 0); /* optional border */
+  border-radius: 0px;
+  padding: 0px 27.1px 0px 0px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18pt;
+  color: #873122;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
 .HomeHeader{
   .anton-regular {
   font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
+  
   }
   font-size: 25px;
+  width: 95px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #873122;
   
-  padding: 20px 0px 10px 0px;
+  padding: 7px 0px 0px 0px;
+  margin: 29.5px 0px 29.5px 61px;
 }
 
 .HeaderImgContainer{
   width: 100%;
-  margin: 15px 0 50px 0;
+  position: relative;
+  margin: 0px 0 50px 0;
   
 }
 
 .HeaderImg{
   width: 100%;
-  height: auto;
+  height: 820px;
   display: block; /* Removes whitespace below the image */
   max-width: 100%;
 }
 
+.HeaderImgTopText {
+  position: absolute;
+  top: 10%; 
+  left: 5%;
+  color: #ffffff;
+}
+.HeaderImgTopText h2{
+  font-family: "Anton", sans-serif;
+  font-size: 3em;
+}
+
+.HeaderImg2 {
+  position: absolute;
+  top: 6%; 
+  left: 66%;
+
+}
+
+
+.HeaderImgMainText {
+  position: absolute;
+  top: 20%; /* adjust as needed */
+  left: 5%;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.HomeHeaderOverlayText{
+  font-family: "Anton", sans-serif;
+  font-size: 6em;
+}
+
+.HomeHeaderOverlayText2{
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+}
+
+.HeaderImgButton{
+  position: absolute;
+  
+  top: 80%; 
+  left: 5%;
+
+}
+
+.DiscoverMoreText{
+  background-color: #f2ece7; /* 👈 0.3 = 30% opaque */
+  border: 1px solid rgba(255, 255, 255, 0); /* optional border */
+  border-radius: 25pt;
+  padding: 0px 50px 0px 50px;
+  margin: 0px 10px 10px 0px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  
+  color: #8e3d2a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.DiscoverMoreImg{
+  background-color: rgba(255, 255, 255, 0); /* 👈 0.3 = 30% opaque */
+  border: 1px solid rgba(255, 255, 255, 0); /* optional border */
+  cursor: pointer;
+  position: absolute;
+  
+  top: 80%; 
+  left: 28%;
+
+  transition: background-color 0.3s ease;
+}
+
+/*******************************************************************************/
 
 
 
@@ -255,6 +374,8 @@ html, body {
 
 .HomeGridSectionCard {
   position: relative;
+  
+  text-align: left;
   background-size: cover;
   background-position: center;
   border-radius: 12px;
@@ -267,7 +388,8 @@ html, body {
 .HomeGridSectionCard::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
+  top: 0; 
+  left: 0;
   width: 100%;
   height: 100%;
   background-image: inherit;
@@ -292,6 +414,7 @@ html, body {
   font-size: 3.5rem; 
   font-family: "Anton", sans-serif;
   color: white;
+
   
 }
 
@@ -610,3 +733,6 @@ html, body {
   font-size: 3.5vw;
   padding: 75px 75px 0 75px;
 }
+
+
+
